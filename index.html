@@ -7,113 +7,108 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@900&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0A0A0B; color: #94A3B8; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: #0A0A0B; color: #94A3B8; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .hero-title { font-family: 'Lexend', sans-serif; letter-spacing: -0.05em; color: white; }
         .glow-button { background: #2D5BFF; box-shadow: 0 0 20px rgba(45, 91, 255, 0.4); transition: all 0.3s ease; }
         .glow-button:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(45, 91, 255, 0.6); }
-        .bento-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); }
+        .bento-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .bento-card:hover { transform: scale(1.02); border-color: rgba(45, 91, 255, 0.5); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
     </style>
 </head>
 <body class="antialiased">
 
     <section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
         <h1 class="hero-title text-6xl md:text-8xl mb-6 uppercase">Websites That <br><span class="text-blue-600">Close Your Deals.</span></h1>
-        <p class="text-xl max-w-2xl mb-10">We build high-performance custom sites and apps in Houston that turn visitors into revenue—faster than your competition.</p>
-        <div class="flex gap-4">
-            <button class="glow-button text-white font-bold py-4 px-8 rounded-xl text-lg">Get Your Free Blueprint</button>
-            <button class="border border-slate-700 hover:bg-slate-800 py-4 px-8 rounded-xl text-lg transition">View Our Work</button>
+        <p class="text-xl max-w-2xl mb-10 text-slate-400">We engineer high-performance custom sites in Houston that turn visitors into revenue—faster than your competition.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <button onclick="scrollToContact()" class="glow-button text-white font-bold py-4 px-8 rounded-xl text-lg">Claim Your Strategy Blueprint</button>
+            <button onclick="scrollToStack()" class="border border-slate-700 hover:bg-slate-800 py-4 px-8 rounded-xl text-lg transition text-white">View The Tech Stack</button>
         </div>
     </section>
 
-<style>
-    /* Add this to your existing <style> block */
-    .bento-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default; }
-    .bento-card:hover { transform: scale(1.02); border-color: rgba(45, 91, 255, 0.5); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-    .tech-icon { filter: grayscale(1); transition: all 0.3s ease; opacity: 0.6; }
-    .bento-card:hover .tech-icon { filter: grayscale(0); opacity: 1; transform: rotate(-5deg); }
-    html { scroll-behavior: smooth; }
-</style>
-
-<section id="stack" class="max-w-6xl mx-auto py-24 px-6">
-    <h2 class="text-white text-3xl font-bold mb-12">The Tech Behind The Traction</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bento-card p-8 rounded-2xl md:col-span-2 relative group overflow-hidden">
-            <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl group-hover:bg-blue-600/20 transition"></div>
-            <h3 class="text-white text-xl font-bold mb-2">Next.js 16 Architecture</h3>
-            <p>Server-side rendering for instant SEO and sub-second page loads.</p>
-        </div>
-        <div class="bento-card p-8 rounded-2xl group">
-            <h3 class="text-white text-xl font-bold mb-2">TypeScript</h3>
-            <p>Type-safe code for military-grade app security.</p>
-        </div>
-    </div>
-</section>
-
-<script>
-    // Simple script to make all 'Blueprint' buttons scroll to the contact section
-    document.querySelectorAll('button').forEach(button => {
-        if (button.innerText.includes('Blueprint')) {
-            button.onclick = () => document.getElementById('contact').scrollIntoView();
-        }
-    });
-</script>
-    
-    <section class="max-w-6xl mx-auto py-24 px-6">
-    <div class="text-center mb-16">
-        <h2 class="hero-title text-4xl mb-4 uppercase">Built to Scale. <span class="text-blue-600">Priced to Win.</span></h2>
-        <p class="text-lg">We don't charge for hours. We charge for outcomes.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bento-card p-10 rounded-3xl border-slate-800">
-            <h3 class="text-white text-2xl font-bold mb-2">The Performance Pro</h3>
-            <p class="mb-6">Best for high-growth service businesses.</p>
-            <div class="text-4xl text-white font-bold mb-8">$5,000 <span class="text-sm font-normal text-slate-500">/start</span></div>
-            <ul class="space-y-4 mb-10 text-sm">
-                <li class="flex items-center">✓ Custom Next.js Architecture</li>
-                <li class="flex items-center">✓ < 1.0s Load Time Guarantee</li>
-                <li class="flex items-center">✓ A/B Tested UI Patterns</li>
-                <li class="flex items-center">✓ 30 Days Technical Support</li>
-            </ul>
-            <button class="w-full border border-slate-700 py-4 rounded-xl hover:bg-slate-800 transition">Select Pro</button>
-        </div>
-
-        <div class="bento-card p-10 rounded-3xl border-blue-600/50 relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-4 py-1 rounded-bl-lg uppercase">Most Popular</div>
-            <h3 class="text-white text-2xl font-bold mb-2">The Enterprise App</h3>
-            <p class="mb-6">Best for SaaS, FinTech, & Custom Portals.</p>
-            <div class="text-4xl text-white font-bold mb-8">$15,000 <span class="text-sm font-normal text-slate-500">/start</span></div>
-            <ul class="space-y-4 mb-10 text-sm">
-                <li class="flex items-center">✓ Full-Stack TypeScript Logic</li>
-                <li class="flex items-center">✓ High-Concurrency Optimization</li>
-                <li class="flex items-center">✓ Custom User Workflows</li>
-                <li class="flex items-center">✓ Dedicated Technical Partner</li>
-            </ul>
-            <button class="w-full glow-button text-white font-bold py-4 rounded-xl">Select Enterprise</button>
-        </div>
-    </div>
-</section>
-<section class="max-w-4xl mx-auto py-24 px-6">
-        <h2 class="hero-title text-3xl mb-12 uppercase text-center">Common Questions</h2>
-        <div class="space-y-6 mb-20">
-            <div class="bento-card p-6 rounded-2xl">
-                <h4 class="text-white font-bold mb-2">Why not just use WordPress?</h4>
-                <p class="text-sm">WordPress is slow and vulnerable. We use Next.js for sub-second speeds and military-grade security that templates can't match.</p>
+    <section id="stack" class="max-w-6xl mx-auto py-24 px-6">
+        <h2 class="text-white text-3xl font-bold mb-12 uppercase">The Tech Behind The Traction</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-300">
+            <div class="bento-card p-8 rounded-2xl md:col-span-2 relative group overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl group-hover:bg-blue-600/20 transition"></div>
+                <h3 class="text-white text-xl font-bold mb-2">Next.js 16 Architecture</h3>
+                <p>Server-side rendering for instant SEO and sub-second page loads. Built for speed.</p>
             </div>
-            <div class="bento-card p-6 rounded-2xl">
-                <h4 class="text-white font-bold mb-2">Do I own the code?</h4>
-                <p class="text-sm">100%. We push your custom build to your own GitHub repository. No platform lock-in, ever.</p>
+            <div class="bento-card p-8 rounded-2xl group">
+                <h3 class="text-white text-xl font-bold mb-2">TypeScript</h3>
+                <p>Type-safe code for military-grade app security and zero-bug logic.</p>
             </div>
-            <div class="bento-card p-6 rounded-2xl">
-                <h4 class="text-white font-bold mb-2">How fast can we launch?</h4>
-                <p class="text-sm">Most custom high-performance builds go live within 4-6 weeks depending on complexity.</p>
+            <div class="bento-card p-8 rounded-2xl group">
+                <h3 class="text-white text-xl font-bold mb-2">Supabase</h3>
+                <p>Scalable backends that handle 1M+ users without breaking a sweat.</p>
+            </div>
+            <div class="bento-card p-8 rounded-2xl md:col-span-2 group">
+                <h3 class="text-white text-xl font-bold mb-2">Tailwind + Framer</h3>
+                <p>Innovative UI that feels fluid and premium—not boxy or dated like WordPress.</p>
             </div>
         </div>
+    </section>
 
-        <div class="text-center bg-blue-600/10 border border-blue-600/20 p-12 rounded-3xl">
-            <h2 class="hero-title text-4xl mb-6 uppercase">Stop Settling For <span class="text-blue-600">Slow Growth.</span></h2>
-            <button class="glow-button text-white font-bold py-5 px-12 rounded-2xl text-xl">Claim Your Strategy Blueprint</button>
-            <p class="mt-6 text-sm opacity-50">Currently accepting 2 new projects for April.</p>
+    <section id="pricing" class="max-w-6xl mx-auto py-24 px-6">
+        <div class="text-center mb-16">
+            <h2 class="hero-title text-4xl mb-4 uppercase">Built to Scale. <span class="text-blue-600">Priced to Win.</span></h2>
+            <p class="text-lg text-slate-400">Flexible options to get your project moving today.</p>
         </div>
-    </section></body>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            <div class="bento-card p-8 rounded-3xl border-slate-800">
+                <h3 class="text-white text-xl font-bold mb-2">The Strategy Audit</h3>
+                <p class="mb-6 text-sm">Full teardown of your current site & a 2026 growth blueprint.</p>
+                <div class="text-3xl text-white font-bold mb-2">$1,000</div>
+                <p class="text-xs text-blue-500 mb-8 font-semibold uppercase tracking-wider">100% Credited toward build</p>
+                <button onclick="scrollToContact()" class="w-full border border-slate-700 py-3 rounded-xl hover:bg-slate-800 transition text-white">Start The Audit</button>
+            </div>
+
+            <div class="bento-card p-8 rounded-3xl border-slate-800 relative">
+                <h3 class="text-white text-xl font-bold mb-2">The Performance Pro</h3>
+                <p class="mb-6 text-sm">Best for service businesses & landing pages.</p>
+                <div class="text-3xl text-white font-bold mb-1">$5,000</div>
+                <p class="text-xs text-slate-500 mb-8 italic">Or 3 payments of $1,750</p>
+                <ul class="space-y-3 mb-10 text-sm">
+                    <li>✓ Custom Next.js Architecture</li>
+                    <li>✓ < 1.0s Load Time Guarantee</li>
+                    <li>✓ A/B Tested UI Patterns</li>
+                </ul>
+                <button onclick="scrollToContact()" class="w-full border border-slate-700 py-3 rounded-xl hover:bg-slate-800 transition text-white">Select Pro</button>
+            </div>
+
+            <div class="bento-card p-8 rounded-3xl border-blue-600/50 relative overflow-hidden ring-1 ring-blue-600/20">
+                <div class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Most Popular</div>
+                <h3 class="text-white text-xl font-bold mb-2">The Enterprise App</h3>
+                <p class="mb-6 text-sm">Best for SaaS, FinTech, & Custom Portals.</p>
+                <div class="text-3xl text-white font-bold mb-1">$15,000</div>
+                <p class="text-xs text-slate-500 mb-8 italic">Or 4 payments of $3,950</p>
+                <ul class="space-y-3 mb-10 text-sm">
+                    <li>✓ Full-Stack TypeScript Logic</li>
+                    <li>✓ Custom User Workflows</li>
+                    <li>✓ Dedicated Technical Partner</li>
+                </ul>
+                <button onclick="scrollToContact()" class="w-full glow-button text-white font-bold py-3 rounded-xl">Select Enterprise</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-4xl mx-auto py-24 px-6 text-center">
+        <div class="bg-blue-600/10 border border-blue-600/20 p-12 rounded-3xl">
+            <h2 class="hero-title text-4xl mb-6 uppercase">Ready to <span class="text-blue-600">Dominate?</span></h2>
+            <p class="mb-10 text-slate-400">Drop your info below and we'll send you a custom growth strategy within 24 hours.</p>
+            <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Your Work Email" class="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-blue-600 transition">
+                <button type="submit" class="glow-button text-white font-bold px-8 py-4 rounded-xl">Get Started</button>
+            </form>
+            <p class="mt-6 text-xs opacity-50 uppercase tracking-widest">Houston's Elite Performance Studio</p>
+        </div>
+    </section>
+
+    <script>
+        function scrollToContact() { document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }
+        function scrollToStack() { document.getElementById('stack').scrollIntoView({ behavior: 'smooth' }); }
+    </script>
+
+</body>
 </html>
