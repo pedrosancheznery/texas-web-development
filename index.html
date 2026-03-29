@@ -27,6 +27,22 @@
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
+            /* Premium Mobile Refinements */
+            @media (max-width: 600px) {
+                body {
+                    padding: 0 20px; /* Prevents text from hitting the screen edges */
+                }
+            
+                .cta-button, button {
+                    width: 100%; /* Makes buttons full-width for easier thumb-tapping */
+                    padding: 18px; /* Increases tap target size */
+                    font-size: 1.1rem;
+                }
+            
+                section {
+                    padding: 60px 0; /* Increases vertical spacing between sections */
+                }
+            }
             .glow { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
             .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
             .reveal.visible { opacity: 1; transform: translateY(0); }
