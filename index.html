@@ -50,7 +50,28 @@
             </div>
         </div>
     </section>
-
+    
+    <section id="contact" class="py-32 max-w-3xl mx-auto px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black tracking-tighter mb-4">READY TO SCALE?</h2>
+            <p class="text-gray-400">Fill out the form below and we'll reach out within 24 hours.</p>
+        </div>
+    
+        <form action="https://formspree.io/f/xdapeekn" method="POST" class="grid gap-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <input type="text" name="name" placeholder="Name" required 
+                    class="bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition-colors">
+                <input type="email" name="email" placeholder="Email" required 
+                    class="bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition-colors">
+            </div>
+            <textarea name="message" placeholder="Tell us about your project" rows="4" required 
+                class="bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+            
+            <button type="submit" class="bg-blue-600 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all glow">
+                Send Message
+            </button>
+        </form>
+    </section>
     <footer class="py-20 text-center text-gray-600 text-sm">
         &copy; 2026 Texas Web Development. Built for the modern web.
     </footer>
