@@ -11,76 +11,81 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #050505; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #050505; 
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
         .glow { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
     </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Texas Web Development",
-  "image": "https://txwebdevelopment.com/logo.png",
-  "@id": "https://txwebdevelopment.com",
-  "url": "https://txwebdevelopment.com",
-    "description": "High-performance digital engines for Texas businesses that outrank, out-convert, and outclass the competition using AI-driven SEO.",
-  "telephone": "+1-555-0123",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "16526 Park Row Blvd",
-    "addressLocality": "Houston",
-    "addressRegion": "TX",
-    "postalCode": "77084",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 29.7845,
-    "longitude": 95.6669
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    "opens": "09:00",
-    "closes": "18:00"
-  },
-  "sameAs": [
-    "https://linkedin.com/in/pedrosanchez",
-    "https://github.com/pedrosancheznery"
-  ],
-"@graph": [
+    <script type="application/ld+json">
     {
-      "@type": "Organization",
-      "@id": "https://txwebdevelopment.com/#organization",
-      "name": "Texas Web Development",
-      "url": "https://txwebdevelopment.com",
-      "logo": "https://txwebdevelopment.com/logo.png",
-      "sameAs": [
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Texas Web Development",
+    "image": "https://txwebdevelopment.com/logo.png",
+    "@id": "https://txwebdevelopment.com",
+    "url": "https://txwebdevelopment.com",
+        "description": "High-performance digital engines for Texas businesses that outrank, out-convert, and outclass the competition using AI-driven SEO.",
+    "telephone": "+1-555-0123",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "16526 Park Row Blvd",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77084",
+        "addressCountry": "US"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.7845,
+        "longitude": 95.6669
+    },
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+    },
+    "sameAs": [
         "https://linkedin.com/in/pedrosanchez",
         "https://github.com/pedrosancheznery"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://txwebdevelopment.com/#website",
-      "url": "https://txwebdevelopment.com",
-      "name": "Texas Web Development",
-      "publisher": {"@id": "https://txwebdevelopment.com/#organization"}
-    },
-    {
-      "@type": "Service",
-      "serviceType": "Web Development & AI Strategy",
-      "provider": {"@id": "https://txwebdevelopment.com/#organization"},
-      "areaServed": {
-        "@type": "State",
-        "name": "Texas"
-      },
-      "description": "High-performance digital engines for Texas businesses that outrank, out-convert, and outclass the competition using AI-driven SEO."
+    ],
+    "@graph": [
+        {
+        "@type": "Organization",
+        "@id": "https://txwebdevelopment.com/#organization",
+        "name": "Texas Web Development",
+        "url": "https://txwebdevelopment.com",
+        "logo": "https://txwebdevelopment.com/logo.png",
+        "sameAs": [
+            "https://linkedin.com/in/pedrosanchez",
+            "https://github.com/pedrosancheznery"
+        ]
+        },
+        {
+        "@type": "WebSite",
+        "@id": "https://txwebdevelopment.com/#website",
+        "url": "https://txwebdevelopment.com",
+        "name": "Texas Web Development",
+        "publisher": {"@id": "https://txwebdevelopment.com/#organization"}
+        },
+        {
+        "@type": "Service",
+        "serviceType": "Web Development & AI Strategy",
+        "provider": {"@id": "https://txwebdevelopment.com/#organization"},
+        "areaServed": {
+            "@type": "State",
+            "name": "Texas"
+        },
+        "description": "High-performance digital engines for Texas businesses that outrank, out-convert, and outclass the competition using AI-driven SEO."
+        }
+    ]
     }
-  ]
-}
-</script>
+    </script>
 </head>
 <body class="text-gray-100 selection:bg-blue-500">
 
@@ -89,7 +94,7 @@
         <a href="#contact" class="border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-300">Get a Quote</a>
     </nav>
 
-    <section class="h-[80vh] flex flex-col justify-center items-center text-center px-4">
+    <section class="h-[80vh] flex flex-col justify-center items-center text-center px-4" id="hero">
         <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-none">
             WE BUILD TO <span class="text-blue-500">WIN.</span>
         </h1>
@@ -103,7 +108,7 @@
         </div>
     </section>
     
-    <section class="py-20 px-8 max-w-7xl mx-auto">
+    <section class="py-20 px-8 max-w-7xl mx-auto" id="statement">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div class="reveal">
                 <h3 class="text-blue-500 font-bold mb-2">01. AI-Driven SEO</h3>
@@ -120,7 +125,7 @@
         </div>
     </section>
     
-    <section class="py-32 bg-white/5">
+    <section class="py-32 bg-white/5" id="objective">
         <div class="max-w-5xl mx-auto px-8 grid md:grid-cols-3 gap-12">
             <div>
                 <h3 class="text-blue-500 font-bold mb-2">01. REVENUE</h3>
@@ -137,15 +142,16 @@
         </div>
     </section>
 
-    <section id="services" class="py-32 px-8 max-w-7xl mx-auto">
-    <div class="mb-16">
-        <h2 class="text-4xl font-black tracking-tighter mb-4">TEXAS-BRED DIGITAL SOLUTIONS</h2>
-        <p class="text-gray-400 max-w-2xl">High-performance web development tailored for the unique competitive landscape of the Lone Star State.</p>
-    </div>
+    <section id="services" class="py-32 px-8 max-w-7xl mx-auto" id="texas">
+        <div class="mb-16">
+            <h2 class="text-4xl font-black tracking-tighter mb-4">TEXAS-BRED DIGITAL SOLUTIONS</h2>
+            <p class="text-gray-400 max-w-2xl">High-performance web development tailored for the unique competitive landscape of the Lone Star State.</p>
+        </div>
+    </section>
     
-    <section class="py-32 px-8 border-t border-white/5">
+    <section class="py-32 px-8 border-t border-white/5" id="blueprint">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black tracking-tighter mb-16 italic">THE BLUEPRINT TO $10K VALUE</h2>
+            <h2 class="text-4xl font-black tracking-tighter mb-16 italic">THE BLUEPRINT</h2>
             <div class="space-y-24">
                 <div class="flex flex-col md:flex-row gap-12 items-center reveal">
                     <div class="text-6xl font-black text-white/10 md:w-1/4">01</div>
@@ -174,59 +180,38 @@
         </div>
     </section>
         
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-8 bg-white/5 border border-white/10 rounded-2xl reveal">
-            <h3 class="text-xl font-bold mb-4">Houston Enterprise Web Dev</h3>
-            <p class="text-gray-400 mb-6">Scalable architecture for Houston's energy, medical, and aerospace sectors. Built for reliability.</p>
-            <ul class="text-sm text-blue-500 space-y-2">
-                <li>• Corporate Portals</li>
-                <li>• API Integration</li>
-            </ul>
-        </div>
-
-        <div class="p-8 bg-white/5 border border-white/10 rounded-2xl reveal">
-            <h3 class="text-xl font-bold mb-4">Austin Tech & Startup Sites</h3>
-            <p class="text-gray-400 mb-6">Aggressive, conversion-focused landing pages for Austin's booming "Silicon Hills" ecosystem.</p>
-            <ul class="text-sm text-blue-500 space-y-2">
-                <li>• Rapid Prototyping</li>
-                <li>• VC-Ready Pitch Sites</li>
-            </ul>
-        </div>
-
-        <div class="p-8 bg-white/5 border border-white/10 rounded-2xl reveal">
-            <h3 class="text-xl font-bold mb-4">Dallas Luxury Branding</h3>
-            <p class="text-gray-400 mb-6">Premium digital experiences for DFW real estate and professional services that demand excellence.</p>
-            <ul class="text-sm text-blue-500 space-y-2">
-                <li>• High-End Visuals</li>
-                <li>• Brand Identity</li>
-            </ul>
-        </div>
-    </div>
-</section>
-    
-    <section id="contact" class="py-32 max-w-3xl mx-auto px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-black tracking-tighter mb-4">READY TO SCALE?</h2>
-            <p class="text-gray-400">Fill out the form below and we'll reach out within 24 hours.</p>
-        </div>
-    
-        <form action="https://formspree.io/f/xdapeekn" method="POST" class="grid gap-6">
-            <div class="grid md:grid-cols-2 gap-6">
-                <input type="text" name="name" placeholder="Name" required 
-                    class="bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition-colors">
-                <input type="email" name="email" placeholder="Email" required 
-                    class="bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition-colors">
+    <section id="regional">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 bg-white/5 border border-white/10 rounded-2xl reveal">
+                <h3 class="text-xl font-bold mb-4">Houston Enterprise Web Dev</h3>
+                <p class="text-gray-400 mb-6">Scalable architecture for Houston's energy, medical, and aerospace sectors. Built for reliability.</p>
+                <ul class="text-sm text-blue-500 space-y-2">
+                    <li>• Corporate Portals</li>
+                    <li>• API Integration</li>
+                </ul>
             </div>
-            <textarea name="message" placeholder="Tell us about your project" rows="4" required 
-                class="bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition-colors"></textarea>
-            
-            <button type="submit" class="bg-blue-600 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all glow">
-                Send Message
-            </button>
-        </form>
+
+            <div class="p-8 bg-white/5 border border-white/10 rounded-2xl reveal">
+                <h3 class="text-xl font-bold mb-4">Austin Tech & Startup Sites</h3>
+                <p class="text-gray-400 mb-6">Aggressive, conversion-focused landing pages for Austin's booming "Silicon Hills" ecosystem.</p>
+                <ul class="text-sm text-blue-500 space-y-2">
+                    <li>• Rapid Prototyping</li>
+                    <li>• VC-Ready Pitch Sites</li>
+                </ul>
+            </div>
+
+            <div class="p-8 bg-white/5 border border-white/10 rounded-2xl reveal">
+                <h3 class="text-xl font-bold mb-4">Dallas Luxury Branding</h3>
+                <p class="text-gray-400 mb-6">Premium digital experiences for DFW real estate and professional services that demand excellence.</p>
+                <ul class="text-sm text-blue-500 space-y-2">
+                    <li>• High-End Visuals</li>
+                    <li>• Brand Identity</li>
+                </ul>
+            </div>
+        </div>
     </section>
-    
-    <section class="py-20 border-y border-white/5 overflow-hidden">
+        
+    <section class="py-20 border-y border-white/5 overflow-hidden" id="tech-stack">
         <div class="max-w-7xl mx-auto px-8">
             <p class="text-center text-xs font-bold tracking-widest text-gray-500 uppercase mb-10">Optimized for 2026 Web Standards</p>
             <div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
@@ -238,11 +223,53 @@
             </div>
         </div>
     </section>
-    
-    <footer class="py-20 text-center text-gray-600 text-sm">
-        &copy; 2026 Texas Web Development. Built for the modern web.
-    </footer>
 
+    <section id="contact" class="py-32 max-w-5xl mx-auto px-8">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-black tracking-tighter mb-6">READY TO SCALE?</h2>
+                <p class="text-gray-400 mb-8 text-lg">Based in the heart of Texas, we help brands move faster. Fill out the form and our lead strategist will reach out within 24 hours.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 text-blue-500 font-bold">
+                        <span>HOUSTON</span>
+                        <span class="text-gray-600">•</span>
+                        <span>AUSTIN</span>
+                        <span class="text-gray-600">•</span>
+                        <span>DALLAS</span>
+                    </div>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest">Available for Remote & On-Site Consultation</p>
+                </div>
+            </div>
+    
+            <form action="https://formspree.io/f/xdapeekn" method="POST" class="grid gap-6 bg-white/5 p-8 rounded-3xl border border-white/10">
+                <div class="grid gap-6">
+                    <input type="text" name="name" placeholder="Name" required class="bg-white/10 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition-colors placeholder:text-gray-500">
+                    <input type="email" name="email" placeholder="Email" required class="bg-white/10 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition-colors placeholder:text-gray-500">
+                </div>
+                <textarea name="message" placeholder="Tell us about your project goals" rows="4" required class="bg-white/10 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition-colors placeholder:text-gray-500"></textarea>
+                <button type="submit" class="bg-blue-600 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all glow">Start Your Project</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-left">
+                <div class="text-xl font-black tracking-tighter mb-2 text-white">TEXAS WEB DEVELOPMENT</div>
+                <p class="text-gray-600 text-sm">Building the future of the Lone Star State's digital economy.</p>
+            </div>
+            
+            <div class="flex gap-8 text-sm font-bold tracking-widest text-gray-500">
+                <a href="#services" class="hover:text-blue-500 transition-colors">SERVICES</a>
+                <a href="#contact" class="hover:text-blue-500 transition-colors">CONTACT</a>
+            </div>
+        </div>
+        <div class="mt-12 text-center text-gray-700 text-xs">
+            &copy; 2026 Texas Web Development. Built for performance, speed, and conversion.
+        </div>
+    </footer>
+    
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
