@@ -1,0 +1,12 @@
+# Texas Web Development - robots.txt
+# Optimized for 2026 Search Algorithms
+
+User-agent: *
+Allow: /
+
+# Directives for better crawl budget management
+Disallow: /private/
+Disallow: /temp/
+
+# Link to your sitemap (ensure the URL matches your final domain)
+Sitemap: https://pedrosancheznery.github.io/texas-web-development/sitemap.xml
