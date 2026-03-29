@@ -94,6 +94,28 @@
     ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pedrosancheznery.github.io/texas-web-development/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://pedrosancheznery.github.io/texas-web-development/#services"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Case Studies",
+        "item": "https://pedrosancheznery.github.io/texas-web-development/#work"
+      }]
+    }
+    </script>
 </head>
 <body class="text-gray-100 selection:bg-blue-500">
 
@@ -250,7 +272,7 @@
         </div>
     </section>
 
-    <section id="insights" class="py-32 px-8 max-w-7xl mx-auto border-t border-white/5" id="insights">
+    <section id="insights" class="py-32 px-8 max-w-7xl mx-auto border-t border-white/5" id="insights2">
         <div class="flex justify-between items-end mb-16">
             <div>
                 <h2 class="text-4xl font-black tracking-tighter mb-4 uppercase">Texas Tech Insights</h2>
@@ -302,8 +324,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-gradient-to-br from-blue-600/20 to-black min-h-[400px] flex items-center justify-center border-l border-white/10">
-                    <div class="text-white/10 font-black text-6xl rotate-12 select-none">PREMIUM</div>
+                <div class="bg-gradient-to-br from-blue-600/20 to-black min-h-[400px] flex items-center justify-center border-l border-white/10" aria-label="Texas Fintech Case Study Visual">
+                    <div class="text-white/10 font-black text-6xl rotate-12 select-none uppercase">Premium</div>
                 </div>
             </div>
         </div>
@@ -347,6 +369,8 @@
             
             <div class="flex gap-8 text-sm font-bold tracking-widest text-gray-500">
                 <a href="#services" class="hover:text-blue-500 transition-colors">SERVICES</a>
+                <a href="#work" class="hover:text-blue-500 transition-colors">WORK</a>
+                <a href="#insights" class="hover:text-blue-500 transition-colors">INSIGHTS</a>
                 <a href="#contact" class="hover:text-blue-500 transition-colors">CONTACT</a>
             </div>
         </div>
