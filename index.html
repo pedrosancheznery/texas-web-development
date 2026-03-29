@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Web Development | Websites That Close Your Deals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@900&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0A0A0B; color: #94A3B8; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-title { font-family: 'Lexend', sans-serif; letter-spacing: -0.05em; color: white; }
+        .glow-button { background: #2D5BFF; box-shadow: 0 0 20px rgba(45, 91, 255, 0.4); transition: all 0.3s ease; }
+        .glow-button:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(45, 91, 255, 0.6); }
+        .bento-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
+        <h1 class="hero-title text-6xl md:text-8xl mb-6 uppercase">Websites That <br><span class="text-blue-600">Close Your Deals.</span></h1>
+        <p class="text-xl max-w-2xl mb-10">We build high-performance custom sites and apps in Houston that turn visitors into revenue—faster than your competition.</p>
+        <div class="flex gap-4">
+            <button class="glow-button text-white font-bold py-4 px-8 rounded-xl text-lg">Get Your Free Blueprint</button>
+            <button class="border border-slate-700 hover:bg-slate-800 py-4 px-8 rounded-xl text-lg transition">View Our Work</button>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto py-24 px-6">
+        <h2 class="text-white text-3xl font-bold mb-12">The Tech Behind The Traction</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bento-card p-8 rounded-2xl md:col-span-2">
+                <h3 class="text-white text-xl font-bold mb-2">Next.js 16 Architecture</h3>
+                <p>Server-side rendering for instant SEO and sub-second page loads.</p>
+            </div>
+            <div class="bento-card p-8 rounded-2xl">
+                <h3 class="text-white text-xl font-bold mb-2">TypeScript</h3>
+                <p>Bulletproof security and zero-bug logic.</p>
+            </div>
+            <div class="bento-card p-8 rounded-2xl">
+                <h3 class="text-white text-xl font-bold mb-2">Supabase</h3>
+                <p>Real-time data for apps that scale to 1M+ users.</p>
+            </div>
+            <div class="bento-card p-8 rounded-2xl md:col-span-2">
+                <h3 class="text-white text-xl font-bold mb-2">Tailwind + Framer</h3>
+                <p>Innovative UI that feels fluid—not boxy or dated.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
