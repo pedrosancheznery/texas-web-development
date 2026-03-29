@@ -3,144 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texas Web Development | Websites That Close Your Deals</title>
+    <title>Texas Web Development | High-Performance Digital Engines</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@900&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0A0A0B; color: #94A3B8; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .hero-title { font-family: 'Lexend', sans-serif; letter-spacing: -0.05em; color: white; }
-        .glow-button { background: #2D5BFF; box-shadow: 0 0 20px rgba(45, 91, 255, 0.4); transition: all 0.3s ease; }
-        .glow-button:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(45, 91, 255, 0.6); }
-        .bento-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .bento-card:hover { transform: scale(1.02); border-color: rgba(45, 91, 255, 0.5); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        body { font-family: 'Inter', sans-serif; background-color: #050505; }
+        .glow { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="antialiased">
+<body class="text-gray-100 selection:bg-blue-500">
 
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <h1 class="hero-title text-6xl md:text-8xl mb-6 uppercase">Websites That <br><span class="text-blue-600">Close Your Deals.</span></h1>
-        <p class="text-xl max-w-2xl mb-10 text-slate-400">We engineer high-performance custom sites in Houston that turn visitors into revenue—faster than your competition.</p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <button onclick="scrollToContact()" class="glow-button text-white font-bold py-4 px-8 rounded-xl text-lg">Claim Your Strategy Blueprint</button>
-            <button onclick="scrollToStack()" class="border border-slate-700 hover:bg-slate-800 py-4 px-8 rounded-xl text-lg transition text-white">View The Tech Stack</button>
+    <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-xl font-black tracking-tighter italic">TX.DEV</div>
+        <a href="#contact" class="border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-300">Get a Quote</a>
+    </nav>
+
+    <section class="h-[80vh] flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-none">
+            WE BUILD TO <span class="text-blue-500">WIN.</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
+            High-performance digital engines for Texas businesses that outrank, out-convert, and outclass the competition.
+        </p>
+        <div class="flex gap-4">
+            <a href="#contact" class="bg-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all glow">
+                Book a Discovery Call
+            </a>
         </div>
     </section>
 
-    <section id="stack" class="max-w-6xl mx-auto py-24 px-6">
-        <h2 class="text-white text-3xl font-bold mb-12 uppercase">The Tech Behind The Traction</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-300">
-            <div class="bento-card p-8 rounded-2xl md:col-span-2 relative group overflow-hidden">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl group-hover:bg-blue-600/20 transition"></div>
-                <h3 class="text-white text-xl font-bold mb-2">Next.js 16 Architecture</h3>
-                <p>Server-side rendering for instant SEO and sub-second page loads. Built for speed.</p>
+    <section class="py-32 bg-white/5">
+        <div class="max-w-5xl mx-auto px-8 grid md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-blue-500 font-bold mb-2">01. REVENUE</h3>
+                <p class="text-gray-400">We don't build "pretty sites." We build sales tools designed to reduce friction and capture leads.</p>
             </div>
-            <div class="bento-card p-8 rounded-2xl group">
-                <h3 class="text-white text-xl font-bold mb-2">TypeScript</h3>
-                <p>Type-safe code for military-grade app security and zero-bug logic.</p>
+            <div>
+                <h3 class="text-blue-500 font-bold mb-2">02. VELOCITY</h3>
+                <p class="text-gray-400">Sub-1.5s load times. Your customers won't wait, and neither will Google's 2026 ranking algorithms.</p>
             </div>
-            <div class="bento-card p-8 rounded-2xl group">
-                <h3 class="text-white text-xl font-bold mb-2">Supabase</h3>
-                <p>Scalable backends that handle 1M+ users without breaking a sweat.</p>
-            </div>
-            <div class="bento-card p-8 rounded-2xl md:col-span-2 group">
-                <h3 class="text-white text-xl font-bold mb-2">Tailwind + Framer</h3>
-                <p>Innovative UI that feels fluid and premium—not boxy or dated like WordPress.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="max-w-6xl mx-auto py-24 px-6">
-        <div class="text-center mb-16">
-            <h2 class="hero-title text-4xl mb-4 uppercase">Built to Scale. <span class="text-blue-600">Priced to Win.</span></h2>
-            <p class="text-lg text-slate-400">Flexible options to get your project moving today.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            <div class="bento-card p-8 rounded-3xl border-slate-800">
-                <h3 class="text-white text-xl font-bold mb-2">The Strategy Audit</h3>
-                <p class="mb-6 text-sm">Full teardown of your current site & a 2026 growth blueprint.</p>
-                <div class="text-3xl text-white font-bold mb-2">$1,000</div>
-                <p class="text-xs text-blue-500 mb-8 font-semibold uppercase tracking-wider">100% Credited toward build</p>
-                <button onclick="scrollToContact()" class="w-full border border-slate-700 py-3 rounded-xl hover:bg-slate-800 transition text-white">Start The Audit</button>
-            </div>
-
-            <div class="bento-card p-8 rounded-3xl border-slate-800 relative">
-                <h3 class="text-white text-xl font-bold mb-2">The Performance Pro</h3>
-                <p class="mb-6 text-sm">Best for service businesses & landing pages.</p>
-                <div class="text-3xl text-white font-bold mb-1">$5,000</div>
-                <p class="text-xs text-slate-500 mb-8 italic">Or 3 payments of $1,750</p>
-                <ul class="space-y-3 mb-10 text-sm">
-                    <li>✓ Custom Next.js Architecture</li>
-                    <li>✓ < 1.0s Load Time Guarantee</li>
-                    <li>✓ A/B Tested UI Patterns</li>
-                </ul>
-                <button onclick="scrollToContact()" class="w-full border border-slate-700 py-3 rounded-xl hover:bg-slate-800 transition text-white">Select Pro</button>
-            </div>
-
-            <div class="bento-card p-8 rounded-3xl border-blue-600/50 relative overflow-hidden ring-1 ring-blue-600/20">
-                <div class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Most Popular</div>
-                <h3 class="text-white text-xl font-bold mb-2">The Enterprise App</h3>
-                <p class="mb-6 text-sm">Best for SaaS, FinTech, & Custom Portals.</p>
-                <div class="text-3xl text-white font-bold mb-1">$15,000</div>
-                <p class="text-xs text-slate-500 mb-8 italic">Or 4 payments of $3,950</p>
-                <ul class="space-y-3 mb-10 text-sm">
-                    <li>✓ Full-Stack TypeScript Logic</li>
-                    <li>✓ Custom User Workflows</li>
-                    <li>✓ Dedicated Technical Partner</li>
-                </ul>
-                <button onclick="scrollToContact()" class="w-full glow-button text-white font-bold py-3 rounded-xl">Select Enterprise</button>
+            <div>
+                <h3 class="text-blue-500 font-bold mb-2">03. AUTHORITY</h3>
+                <p class="text-gray-400">Custom-coded architecture that positions you as the undisputed leader in your local Texas market.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 px-6 bg-slate-950 border-t border-slate-900">
-      <div class="max-w-3xl mx-auto text-center mb-10">
-        <h2 class="hero-title text-3xl md:text-5xl mb-4 uppercase leading-tight">Ready to Scale?</h2>
-        <p class="text-slate-400 text-sm md:text-base">Fill out the form below and we'll reach out with a custom strategy.</p>
-      </div>
-    
-      <form 
-        action="https://formspree.io/f/xdapeekn" 
-        method="POST" 
-        class="flex flex-col gap-4 max-w-lg mx-auto"
-      >
-        <input type="hidden" name="_next" value="https://texas-web-development.vercel.app/thanks.html">
-        
-        <div class="flex flex-col md:flex-row gap-4">
-          <input 
-            type="text" 
-            name="company" 
-            placeholder="Company Name" 
-            class="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-blue-600 transition text-sm"
-          >
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Work Email" 
-            required 
-            class="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-blue-600 transition text-sm"
-          >
-        </div>
-        
-        <textarea 
-          name="message" 
-          placeholder="Tell us about your project goals..." 
-          rows="4"
-          class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-blue-600 transition text-sm"
-        ></textarea>
-    
-        <button 
-          type="submit" 
-          class="glow-button text-white font-bold px-8 py-5 rounded-xl w-full uppercase tracking-wider text-sm shadow-lg shadow-blue-900/20"
-        >
-          Get My Growth Strategy
-        </button>
-      </form>
-    </section>
+    <footer class="py-20 text-center text-gray-600 text-sm">
+        &copy; 2026 Texas Web Development. Built for the modern web.
+    </footer>
+
     <script>
-        function scrollToContact() { document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }
-        function scrollToStack() { document.getElementById('stack').scrollIntoView({ behavior: 'smooth' }); }
-    </script>
+        // Simple Scroll Reveal Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
 
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('reveal');
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
