@@ -25,28 +25,40 @@
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto py-24 px-6">
-        <h2 class="text-white text-3xl font-bold mb-12">The Tech Behind The Traction</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bento-card p-8 rounded-2xl md:col-span-2">
-                <h3 class="text-white text-xl font-bold mb-2">Next.js 16 Architecture</h3>
-                <p>Server-side rendering for instant SEO and sub-second page loads.</p>
-            </div>
-            <div class="bento-card p-8 rounded-2xl">
-                <h3 class="text-white text-xl font-bold mb-2">TypeScript</h3>
-                <p>Bulletproof security and zero-bug logic.</p>
-            </div>
-            <div class="bento-card p-8 rounded-2xl">
-                <h3 class="text-white text-xl font-bold mb-2">Supabase</h3>
-                <p>Real-time data for apps that scale to 1M+ users.</p>
-            </div>
-            <div class="bento-card p-8 rounded-2xl md:col-span-2">
-                <h3 class="text-white text-xl font-bold mb-2">Tailwind + Framer</h3>
-                <p>Innovative UI that feels fluid—not boxy or dated.</p>
-            </div>
+<style>
+    /* Add this to your existing <style> block */
+    .bento-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default; }
+    .bento-card:hover { transform: scale(1.02); border-color: rgba(45, 91, 255, 0.5); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .tech-icon { filter: grayscale(1); transition: all 0.3s ease; opacity: 0.6; }
+    .bento-card:hover .tech-icon { filter: grayscale(0); opacity: 1; transform: rotate(-5deg); }
+    html { scroll-behavior: smooth; }
+</style>
+
+<section id="stack" class="max-w-6xl mx-auto py-24 px-6">
+    <h2 class="text-white text-3xl font-bold mb-12">The Tech Behind The Traction</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bento-card p-8 rounded-2xl md:col-span-2 relative group overflow-hidden">
+            <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl group-hover:bg-blue-600/20 transition"></div>
+            <h3 class="text-white text-xl font-bold mb-2">Next.js 16 Architecture</h3>
+            <p>Server-side rendering for instant SEO and sub-second page loads.</p>
         </div>
-    </section>
-<section class="max-w-6xl mx-auto py-24 px-6">
+        <div class="bento-card p-8 rounded-2xl group">
+            <h3 class="text-white text-xl font-bold mb-2">TypeScript</h3>
+            <p>Type-safe code for military-grade app security.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Simple script to make all 'Blueprint' buttons scroll to the contact section
+    document.querySelectorAll('button').forEach(button => {
+        if (button.innerText.includes('Blueprint')) {
+            button.onclick = () => document.getElementById('contact').scrollIntoView();
+        }
+    });
+</script>
+    
+    <section class="max-w-6xl mx-auto py-24 px-6">
     <div class="text-center mb-16">
         <h2 class="hero-title text-4xl mb-4 uppercase">Built to Scale. <span class="text-blue-600">Priced to Win.</span></h2>
         <p class="text-lg">We don't charge for hours. We charge for outcomes.</p>
