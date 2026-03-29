@@ -11,6 +11,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .mobile-link {
+            @apply hover:text-blue-500 transition-colors uppercase;
+        }
         body { 
             font-family: 'Inter', sans-serif; 
             background-color: #050505; 
@@ -89,11 +95,27 @@
 </head>
 <body class="text-gray-100 selection:bg-blue-500">
 
-    <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-xl font-black tracking-tighter italic">TX.DEV</div>
-        <a href="#contact" class="border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-300">Get a Quote</a>
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+        <div class="text-2xl font-black tracking-tighter">TXWD</div>
+        
+        <div class="hidden md:flex gap-12 text-xs font-bold tracking-widest text-gray-400">
+            <a href="#services" class="hover:text-blue-500 transition-colors">SERVICES</a>
+            <a href="#process" class="hover:text-blue-500 transition-colors">PROCESS</a>
+            <a href="#contact" class="hover:text-blue-500 transition-colors">CONTACT</a>
+        </div>
+    
+        <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 focus:outline-none">
+            <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+        </button>
+    
+        <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-40 hidden flex-col items-center justify-center gap-8 text-2xl font-black tracking-tighter">
+            <a href="#services" class="mobile-link">SERVICES</a>
+            <a href="#process" class="mobile-link">PROCESS</a>
+            <a href="#contact" class="mobile-link">CONTACT</a>
+        </div>
     </nav>
-
+    
     <section class="h-[80vh] flex flex-col justify-center items-center text-center px-4" id="hero">
         <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-none">
             WE BUILD TO <span class="text-blue-500">WIN.</span>
@@ -271,6 +293,29 @@
     </footer>
     
     <script>
+        // Mobile Menu Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const spans = menuToggle.querySelectorAll('span');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            // Animate hamburger to X
+            spans[0].classList.toggle('rotate-45');
+            spans[0].classList.toggle('translate-y-2');
+            spans[1].classList.toggle('-rotate-45');
+            spans[1].classList.toggle('-translate-y-0');
+        });
+        
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
