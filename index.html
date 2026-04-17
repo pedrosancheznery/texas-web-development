@@ -502,21 +502,32 @@
                 const rssUrl = `https://medium.com/feed/${username}`;
                 const apiEndpoint = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
             
+                // Helper to find an image if the thumbnail field is empty
+                const extractImage = (item) => {
+                    if (item.thumbnail) return item.thumbnail;
+                    const resp = item.description || item.content;
+                    const match = resp.match(/<img[^>]+src="([^">]+)"/);
+                    return match ? match[1] : 'https://via.placeholder.com/600x400/111/555?text=Texas+Web+Dev'; 
+                };
+            
                 try {
                     const response = await fetch(apiEndpoint);
                     const data = await response.json();
                     
                     if (data.status === 'ok') {
                         const container = document.getElementById('medium-content');
-                        container.innerHTML = ''; // Clear loading text
+                        container.innerHTML = ''; 
             
-                        // Only show the 2 most recent posts to fit your grid
                         data.items.slice(0, 2).forEach(item => {
+                            const imageUrl = extractImage(item);
                             const postHtml = `
                                 <article class="group cursor-pointer reveal is-visible">
                                     <a href="${item.link}" target="_blank" rel="noopener">
                                         <div class="overflow-hidden rounded-2xl mb-6 bg-white/5 aspect-video flex items-center justify-center border border-white/10 group-hover:border-blue-500/50 transition-all">
-                                            <img src="${item.thumbnail}" alt="${item.title}" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                                            <img src="${imageUrl}" 
+                                                 alt="${item.title}" 
+                                                 class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                                                 onerror="this.src='https://via.placeholder.com/600x400/111/555?text=TXWD'">
                                         </div>
                                         <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-500 transition-colors line-clamp-2">${item.title}</h3>
                                         <p class="text-gray-500 text-sm mb-4 uppercase tracking-widest">${new Date(item.pubDate).toLocaleDateString()}</p>
@@ -530,7 +541,6 @@
                     console.error("Medium feed failed to load:", error);
                 }
             }
-            
             // Call the function
             loadMediumPosts();
             
